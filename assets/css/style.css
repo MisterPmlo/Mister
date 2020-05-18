@@ -138,7 +138,7 @@ nav {
 
 .home-text .scroll-icon {
     padding-left: 45%;
-    position:absolute;
+    position: absolute;
 }
 
 @media screen and (max-width:1024px) {
@@ -198,29 +198,30 @@ nav {
     margin-top: 30px;
 }
 
-.w3-text-teal, .w3-hover-text-teal:hover 
-{
-    color: #00ffe5!important;
+.w3-text-teal,
+.w3-hover-text-teal:hover {
+    color: #00ffe5 !important;
 }
 
 @media screen and (max-width:1200px) {
     .intro {
         width: 40%;
     }
-    
+
 }
 
 @media screen and (max-width:600px) {
     .intro {
         width: 90%;
     }
+
     .w3-row {
         padding-left: 0%;
     }
 }
 
 
-.button-contact{
+.button-contact {
     background-color: rgb(22, 22, 22);
     border: none;
     color: white;
@@ -236,7 +237,7 @@ nav {
 
 @media screen and (max-width:760px) {
     .button-contact {
-        padding: 10% 30%;  
+        padding: 10% 30%;
     }
 }
 
@@ -257,9 +258,43 @@ nav {
     padding-left: 29%;
 }
 
+@media screen and (max-width:760px) {
+    .compPourcen {
+        padding-left: 0;
+    }
+}
+
 #projets {
     padding-top: 100px;
     padding-bottom: 100px;
     height: auto;
     background-color: rgb(0, 151, 211);
+}
+
+.mySlide {
+    display: none;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+    cursor: pointer;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.w3-badge {
+    height: 16px;
+    width: 16px;
+    padding: 0
 }

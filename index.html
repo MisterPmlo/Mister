@@ -26,7 +26,7 @@
                 <a href="#competences">Compétences</a>
             </li>
             <li>
-                <a href="#">Projets</a>
+                <a href="#projets">Projets</a>
             </li>
         </ul>
         <div class="burger">
@@ -113,7 +113,7 @@
                         <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
                     </div>
                     <br>
-                    <p>Ce sont mes langages principaux, pour HTML et CSS j'ai pu les apprendre en cours lors du DUT. 
+                    <p>Ce sont mes langages principaux, pour HTML et CSS j'ai pu les apprendre en cours lors du DUT.
                         J'apprends le JS en développant chez moi quand j'ai un peu de temps libre</p>
                 </div>
             </div>
@@ -121,9 +121,24 @@
 
     </section>
     <section id="projets">
-
+        <div class="w3-content w3-display-container" style="max-width:800px">
+            <img class="mySlide" src="assets/img/scte_client.png" style="width:100%" draggable="false">
+            <img class="mySlide" src="assets/img/scte_client.png" style="width:100%" draggable="false">
+            <img class="mySlide" src="assets/img/scte_client.png" style="width:100%" draggable="false">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+                style="width:100%">
+                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+        </div>
+        <button class="w3-btn w3-round-xxlarge">and Rounder</button>
     </section>
+
     <script>
+        //Script pour afficher "Le Gaming" et "Mes Passions"
         var slideIndex = 0;
         carousel();
 
@@ -139,6 +154,38 @@
             }
             x[slideIndex - 1].style.display = "block";
             setTimeout(carousel, 10000);
+        }
+
+        // Scripts pour faire défiler les projets
+        var slide = 1;
+        showDivs(slide);
+
+        function plusDivs(n) {
+            showDivs(slide += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slide = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlide");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {
+                slide = 1
+            }
+            if (n < 1) {
+                slide = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slide - 1].style.display = "block";
+            dots[slide - 1].className += " w3-white";
         }
     </script>
 
