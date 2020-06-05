@@ -24,3 +24,9 @@ const navSlide = () => {
 }
 
 navSlide();
+
+// Changer de pages quand on clique sur le bouton Découvrir
+function buttonProjets()
+{
+    window.location = "./projets.html"
+}
