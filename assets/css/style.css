@@ -54,6 +54,17 @@ nav {
     margin: 5px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
 @media screen and (max-width:1024px) {
     .nav-links {
         width: 60%;
@@ -129,16 +140,18 @@ nav {
     background-color: rgb(31, 31, 31);
 }
 
-.home-text {
-    padding-left: 100px;
-    padding-top: 400px;
-    font-size: 40px;
-    color: white;
-}
 
 .home-text .scroll-icon {
     padding-left: 45%;
     position: absolute;
+}
+
+.titre-home-text {
+    padding-left: 100px;
+    padding-top: 400px;
+    font-size: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 @media screen and (max-width:1024px) {
@@ -254,13 +267,13 @@ nav {
     padding-left: 29%;
 }
 
-.compPourcen h1{
+.compPourcen h1 {
     color: #7289da;
 }
 
 
 .w3-blue {
-    background-color: #7289da!important;
+    background-color: #7289da !important;
 }
 
 @media screen and (max-width:760px) {
@@ -308,7 +321,8 @@ nav {
     margin-left: 47%;
     margin-top: 10px;
     color: white;
-    background-color: indianred;
+    background-color: #7289da;
+    font-family: 'Poppins', sans-serif;
 }
 
 .w3-third {
@@ -334,9 +348,9 @@ nav {
 }
 
 .w3-button {
-   width: 100%;
-   background-color: rgb(255, 255, 255);
-   border-radius: 20px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
 }
 
 .w3-button1 {
@@ -352,5 +366,30 @@ nav {
 
 .w3-teal {
     font-size: 20px;
-    background-color: #7289da!important;
+    background-color: #7289da !important;
+}
+
+footer {
+    background-color: rgb(22, 22, 22);
+    height: auto;
+}
+
+footer p {
+    padding-top: 25px;
+    padding-left: 43%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer img {
+    width: 2%;
+    height: auto;
+}
+
+footer a {
+    margin: 3px;
+}
+
+.made {
+    padding-left: 47%;
 }
