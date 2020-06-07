@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <title>Clément MARGUERITTE</title>
+</head>
+
+<body onload="typeWriter()">
+    <nav class="navbar">
+        <div class="logo">
+            <h4>portfolio</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="index.html#about">A Propos</a>
+            </li>
+            <li>
+                <a href="index.html#competences">Compétences</a>
+            </li>
+            <li>
+                <a href="index.html#projets">Projets</a>
+            </li>
+            <li>
+                <a href="#">CV</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <script src="assets\js\app.js"></script>
+    <section id="showCV">
+        <div class="home-text">
+            <h1 class="titre-cv">
+                <center id="demo"></center>
+            </h1>
+        </div>
+    </section>
+
+
+    <footer>
+        <center>
+            <p>Portfolio de Clément MARGUERITTE<br>
+                Mes réseaux:
+                <a href="https://www.linkedin.com/in/cl%C3%A9ment-margueritte-21a174196/" target="_blank"><img
+                        src="assets/img/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.instagram.com/xlemeny_/" target="_blank"><img src="assets/img/insta.png"
+                        alt="instagram"></a>
+                <a href="https://www.twitch.tv/misterpmlo" target="_blank"><img src="assets/img/twitch.png"
+                        alt="twitch"></a> <br>
+        </center>
+        <center class="made">MADE IN 2020</center>
+        </p>
+    </footer>
+
+    <script>
+        var i = 0;
+        var txt = 'CV UnderConstruction';
+        var speed = 100;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                setTimeout(function () {
+                    document.getElementById("demo").innerHTML = '';
+                    i = 0;
+                    typeWriter();
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+
+</html>

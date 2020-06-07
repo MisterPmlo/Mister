@@ -134,17 +134,13 @@ html {
 }
 
 
+/******** PARTIE ACCUEIL ********/
 #accueil {
     padding-top: 100px;
     height: 980px;
     background-color: rgb(31, 31, 31);
 }
 
-
-.home-text .scroll-icon {
-    padding-left: 45%;
-    position: absolute;
-}
 
 .titre-home-text {
     padding-left: 100px;
@@ -154,11 +150,6 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
-@media screen and (max-width:1024px) {
-    .home-text .scroll-icon {
-        bottom: 30px;
-    }
-}
 
 @media screen and (max-width:760px) {
     #accueil {
@@ -171,8 +162,17 @@ html {
         padding-left: 10px;
         font-size: 30px;
     }
+
+    .titre-home-text {
+        padding-left: 0;
+        padding-top: 20px;
+        font-size: 40px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
 }
 
+/******** PARTIE HISTOIRE ********/
 #about {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -234,28 +234,8 @@ html {
 }
 
 
-.button-contact {
-    background-color: rgb(22, 22, 22);
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-left: 50%;
-}
 
-@media screen and (max-width:760px) {
-    .button-contact {
-        padding: 10% 30%;
-    }
-}
-
-
-
+/******** PARTIE COMPETENCES ********/
 #competences {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -263,9 +243,6 @@ html {
     background-color: rgb(43, 43, 43);
 }
 
-.compPourcen {
-    padding-left: 29%;
-}
 
 .compPourcen h1 {
     color: #7289da;
@@ -276,12 +253,22 @@ html {
     background-color: #7289da !important;
 }
 
+@media screen and (max-width:1920px) {
+    .compPourcen {
+        padding-left: 29%;
+        width: auto;
+    }
+
+}
 @media screen and (max-width:760px) {
     .compPourcen {
         padding-left: 0;
+        width: auto;
     }
 }
 
+
+/******** PARTIE PROJETS ********/
 #projets {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -317,8 +304,13 @@ html {
     padding: 0
 }
 
+
+/******** PAGE PROJETS ********/
+.proj {
+    margin-left: 200px;
+}
+
 .w3-btn {
-    margin-left: 47%;
     margin-top: 10px;
     color: white;
     background-color: #7289da;
@@ -327,7 +319,7 @@ html {
 
 .w3-third {
     margin: 50px;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 
 .w3-third img {
@@ -351,6 +343,15 @@ html {
     width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
+    transition: transform .5s;
+    transition: .5s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.w3-button:hover {
+    transform: scale(0.9);
+    background-color: #7289da!important;
 }
 
 .w3-button1 {
@@ -369,21 +370,64 @@ html {
     background-color: #7289da !important;
 }
 
+@media screen and (max-width:760px) {
+    #showProjets {
+        height: 1700px;
+    }
+
+    .w3-third {
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    .proj {
+        margin-left: 0;
+    }
+}
+
+
+/******** PAGE CV ********/
+#showCV {
+    height: 980px;
+}
+
+.titre-cv {
+    padding-top: 400px;
+    font-size: 60px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width:760px) {
+    .titre-cv {
+        padding-top: 200px;
+        font-size: 25px;
+    }
+}
+
+/******** FOOTER ********/
 footer {
     background-color: rgb(22, 22, 22);
     height: auto;
+    bottom: 0;
 }
 
 footer p {
     padding-top: 25px;
-    padding-left: 43%;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
 
 footer img {
-    width: 2%;
+    width: 1%;
     height: auto;
+}
+
+@media screen and (max-width:760px) {
+    footer img {
+        width: 5%;
+        height: auto;
+    }
 }
 
 footer a {
@@ -391,5 +435,64 @@ footer a {
 }
 
 .made {
-    padding-left: 47%;
+    padding-top: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
+
+
+/******** LOAD SCREEN ********/
+
+body {
+    background-color: rgb(31, 31, 31);
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #7289da;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+ /******** SCROLL BAR ********/
+  /* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7289da; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7289da; 
+  }

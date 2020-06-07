@@ -10,146 +10,178 @@
     <title>Clément MARGUERITTE</title>
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <h4>portfolio</h4>
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="#">Accueil</a>
-            </li>
-            <li>
-                <a href="#about">A Propos</a>
-            </li>
-            <li>
-                <a href="#competences">Compétences</a>
-            </li>
-            <li>
-                <a href="#projets">Projets</a>
-            </li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
+<body onload="loadFunction()" style="margin:0;">
 
-    <script src="assets\js\app.js"></script>
-    <section id="accueil">
-        <div class="home-text">
-            <h1 class="titre-home-text">Je suis Clément, <br>Étudiant en informatique &amp; Passioné de jeux vidéos.
-            </h1>
-        </div>
-    </section>
-    <section id="about">
-        <div class="container" id="fh5co-features">
-            <div class="w3-row w3-padding-64">
-                <div class="w3-twothird w3-container">
-                    <h1 class="w3-text-teal">Mon Histoire</h1>
-                    <p>Depuis tout petit je suis passioné par les jeux
-                        vidéos,
-                        je voulais d'abord faire "testeur" de jeux vidéos.
-                        Mais en arrivant en 4ème j'ai commencé à
-                        découvrir le développement grâce à un ami
-                        et depuis je veux me spécialiser dans le développement et plus particulièrement dans le
-                        développement de jeux vidéos.</p>
-                </div>
-            </div>
+    <div id="loader"></div>
 
-            <div class="w3-row w3-padding-64">
-                <div class="w3-twothird w3-container">
-                    <h1 class="w3-text-teal">Mon Parcours</h1>
-                    <p>Je possède le Bac STI2D option SIN avec une mention
-                        BIEN,
-                        grâce à ces 2 années j'ai pu apprendre à développer.
-                        HTML, CSS, mais surtout en Arduino ce qui m'a permis de
-                        réaliser le projet en fin d'année de Terminale.
-                        Ce projet m'a fait découvrir le travail en équipe et aussi l'organisation qu'il faut avoir.
-                    </p>
-                    <p class="animate-this fadeInUp animated">Aujourd'hui, je fais mes études à Lyon pour espérer
-                        avoir un DUT Informatique en poche.
-                </div>
+    <div style="display:none;" id="load">
+        <nav class="navbar">
+            <div class="logo">
+                <h4>portfolio</h4>
             </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Accueil</a>
+                </li>
+                <li>
+                    <a href="#about">A Propos</a>
+                </li>
+                <li>
+                    <a href="#competences">Compétences</a>
+                </li>
+                <li>
+                    <a href="#projets">Projets</a>
+                </li>
+                <li>
+                    <a href="cv.html">CV</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
 
-            <div class="w3-row w3-padding-64">
-                <div class="w3-twothird w3-container mySlides">
-                    <h1 class="w3-text-teal">Le Gaming</h1>
-                    <p>Véritable geek dans l'âme, l'univers stimulant du jeu-vidéo a été un élément déclencheur
-                        important dans ma vocation de créatif. Cette passion m'a d'ailleurs poussé à créer une
-                        <a href="https://www.twitch.tv/misterpmlo" target="blank">chaîne de streaming Twitch</a>
-                        dédiée aux jeu-vidéo et au graphisme, et que j'anime régulièrement. Vecteur de
-                        sensations, d'innovation et de rencontres, le jeu-vidéo, qui rassemble une grande
-                        communauté de passionnés, est aussi une source d'inspiration graphique et de
-                        story-telling inépuisable.</p>
-                </div>
-                <div class="w3-twothird w3-container mySlides">
-                    <h1 class="w3-text-teal">Mes Passions</h1>
-                    <p>Véritable geek dans l'âme, l'univers stimulant du jeu-vidéo a été un élément déclencheur
-                        important dans ma vocation de créatif. Cette passion m'a d'ailleurs poussé à créer une
-                        <a href="https://www.twitch.tv/misterpmlo" target="blank">chaîne de streaming Twitch</a>
-                        dédiée aux jeu-vidéo et au graphisme, et que j'anime régulièrement. Vecteur de
-                        sensations, d'innovation et de rencontres, le jeu-vidéo, qui rassemble une grande
-                        communauté de passionnés, est aussi une source d'inspiration graphique et de
-                        story-telling inépuisable.</p>
-                </div>
+        <script src="assets\js\app.js"></script>
+        <section id="accueil">
+            <div class="home-text">
+                <h1 class="titre-home-text w3-animate-zoom">Je suis Clément, <br>Étudiant en informatique &amp; Passioné
+                    de
+                    jeux vidéos.
+                </h1>
             </div>
-    </section>
-    <section id="competences">
-        <div class="compPourcen">
-            <div class="w3-row w3-padding-64">
-                <h1>Mes compétences</h1>
-                <div class="w3-twothird w3-container">
-                    <h4>HTML</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:70%">70%</div>
+        </section>
+        <section id="about">
+            <div class="container" id="fh5co-features">
+                <div class="w3-row w3-padding-64">
+                    <div class="w3-twothird w3-container">
+                        <h1 class="w3-text-teal">Mon Histoire</h1>
+                        <p>Depuis tout petit je suis passioné par les jeux
+                            vidéos,
+                            je voulais d'abord faire "testeur" de jeux vidéos.
+                            Mais en arrivant en 4ème j'ai commencé à
+                            découvrir le développement grâce à un ami
+                            et depuis je veux me spécialiser dans le développement et plus particulièrement dans le
+                            développement de jeux vidéos.</p>
                     </div>
-                    <h4>CSS</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:60%">60%</div>
-                    </div>
-                    <h4>PYTHON</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:55%">55%</div>
-                    </div>
-                    <h4>JS</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
-                    </div>
-                    <h4>LUA</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:20%">20%</div>
-                    </div>
-                    <br>
-                    <p>Ce sont mes langages principaux, pour HTML, CSS et PYTHON j'ai pu les apprendre en cours lors du
-                        DUT.
-                        J'apprends le JS et le LUA en développant chez moi quand j'ai un peu de temps libre</p>
                 </div>
-            </div>
-        </div>
 
-    </section>
-    <section id="projets">
-        <div class="w3-content w3-display-container" style="max-width:800px">
-            <img class="mySlide" src="assets/img/scte_client.png" style="width:100%" draggable="false">
-            <img class="mySlide" src="assets/img/discord.jpg" style="width:100%" draggable="false">
-            <img class="mySlide" src="assets/img/fivem.png" style="width:100%" draggable="false">
-            <img class="mySlide" src="assets/img/make-a-website.png" style="width:100%" draggable="false">
-            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
-                style="width:100%">
-                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+                <div class="w3-row w3-padding-64">
+                    <div class="w3-twothird w3-container">
+                        <h1 class="w3-text-teal">Mon Parcours</h1>
+                        <p>Je possède le Bac STI2D option SIN avec une mention
+                            BIEN,
+                            grâce à ces 2 années j'ai pu apprendre à développer.
+                            HTML, CSS, mais surtout en Arduino ce qui m'a permis de
+                            réaliser le projet en fin d'année de Terminale.
+                            Ce projet m'a fait découvrir le travail en équipe et aussi l'organisation qu'il faut avoir.
+                        </p>
+                        <p class="animate-this fadeInUp animated">Aujourd'hui, je fais mes études à Lyon pour espérer
+                            avoir un DUT Informatique en poche.
+                    </div>
+                </div>
+
+                <div class="w3-row w3-padding-64">
+                    <div class="w3-twothird w3-container mySlides">
+                        <h1 class="w3-text-teal">Le Gaming</h1>
+                        <p>Véritable geek dans l'âme, l'univers stimulant du jeu-vidéo a été un élément déclencheur
+                            important dans ma vocation de créatif. Cette passion m'a d'ailleurs poussé à créer une
+                            <a href="https://www.twitch.tv/misterpmlo" target="blank">chaîne de streaming Twitch</a>
+                            dédiée aux jeu-vidéo et au graphisme, et que j'anime régulièrement. Vecteur de
+                            sensations, d'innovation et de rencontres, le jeu-vidéo, qui rassemble une grande
+                            communauté de passionnés, est aussi une source d'inspiration graphique et de
+                            story-telling inépuisable.</p>
+                    </div>
+                    <div class="w3-twothird w3-container mySlides">
+                        <h1 class="w3-text-teal">Mes Passions</h1>
+                        <p>Véritable geek dans l'âme, l'univers stimulant du jeu-vidéo a été un élément déclencheur
+                            important dans ma vocation de créatif. Cette passion m'a d'ailleurs poussé à créer une
+                            <a href="https://www.twitch.tv/misterpmlo" target="blank">chaîne de streaming Twitch</a>
+                            dédiée aux jeu-vidéo et au graphisme, et que j'anime régulièrement. Vecteur de
+                            sensations, d'innovation et de rencontres, le jeu-vidéo, qui rassemble une grande
+                            communauté de passionnés, est aussi une source d'inspiration graphique et de
+                            story-telling inépuisable.</p>
+                    </div>
+                </div>
+        </section>
+        <section id="competences">
+            <div class="compPourcen">
+                <div class="w3-row">
+                    <h1>Mes compétences</h1>
+                    <div class="w3-twothird w3-container">
+                        <h4>HTML</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:70%">70%</div>
+                        </div>
+                        <h4>CSS</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:60%">60%</div>
+                        </div>
+                        <h4>PYTHON</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:55%">55%</div>
+                        </div>
+                        <h4>JS</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+                        </div>
+                        <h4>LUA</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:20%">20%</div>
+                        </div>
+                        <br>
+                        <p>Ce sont mes langages principaux, pour HTML, CSS et PYTHON j'ai pu les apprendre en cours lors
+                            du
+                            DUT.
+                            J'apprends le JS et le LUA en développant chez moi quand j'ai un peu de temps libre</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <button class="w3-btn w3-round-xxlarge" onclick="buttonProjets()">Découvrir</button>
-    </section>
+        </section>
+        <section id="projets">
+            <div class="w3-content w3-display-container" style="max-width:800px">
+                <img class="mySlide" src="assets/img/scte_client.png" style="width:100%" draggable="false">
+                <img class="mySlide" src="assets/img/discord.jpg" style="width:100%" draggable="false">
+                <img class="mySlide" src="assets/img/fivem.png" style="width:100%" draggable="false">
+                <img class="mySlide" src="assets/img/make-a-website.png" style="width:100%" draggable="false">
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+                    style="width:100%">
+                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+                </div>
+            </div>
+            <center><button class="w3-btn w3-round-xxlarge" onclick="buttonProjets()">Découvrir</button></center>
+        </section>
+        <footer>
+            <center>
+                <p>Portfolio de Clément MARGUERITTE<br>
+                    Mes réseaux:
+                    <a href="https://www.linkedin.com/in/cl%C3%A9ment-margueritte-21a174196/" target="_blank"><img src="assets/img/linkedin.png" alt="linkedin"></a>
+                    <a href="https://www.instagram.com/xlemeny_/" target="_blank"><img src="assets/img/insta.png" alt="instagram"></a>
+                    <a href="https://www.twitch.tv/misterpmlo" target="_blank"><img src="assets/img/twitch.png" alt="twitch"></a> <br>
+            </center>
+            <center class="made">MADE IN 2020</center>
+            </p>
+        </footer>
+    </div>
 
     <script>
+        // Scirpt pour afficher le loading screen
+        var myVar;
+        function loadFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("load").style.display = "block";
+        }
+
         //Script pour afficher "Le Gaming" et "Mes Passions"
         var slideIndex = 0;
         carousel();
@@ -200,18 +232,6 @@
             dots[slide - 1].className += " w3-white";
         }
     </script>
-
-    <footer>
-        <p>Portfolio de Clément MARGUERITTE<br>
-        Mes réseaux: 
-        <a href="https://www.linkedin.com/in/cl%C3%A9ment-margueritte-21a174196/" target="_blank"><img src="assets/img/linkedin.png" alt="linkedin"></a>
-        <a href="https://www.instagram.com/xlemeny_/" target="_blank"><img src="assets/img/insta.png" alt="instagram"></a>
-        <a href="https://www.twitch.tv/misterpmlo" target="_blank"><img src="assets/img/twitch.png" alt="twitch"></a> <br>
-        </p>
-        <p class="made">MADE IN 2020</p> 
-    </p>
-    </footer>
-
 </body>
 
 </html>
