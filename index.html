@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets\css\style.css">
-    <link rel="icon" href="assets/img/document.png" type="image/gif" sizes="16x16"> <!--Icons made by http://www.freepik.com/ from https://www.flaticon.com/-->
+    <link rel="icon" href="assets/img/document.png" type="image/gif" sizes="16x16">
+    <!--Icons made by http://www.freepik.com/ from https://www.flaticon.com/-->
     <title>Clément MARGUERITTE</title>
 </head>
 
@@ -16,6 +17,7 @@
     <div id="loader"></div>
 
     <div style="display:none;" id="load">
+        <button onclick="topFunction()" id="topButton" title="Remonter"><img src="assets/img/ui.png" alt=""></button>
         <nav class="navbar">
             <div class="logo">
                 <h4>portfolio</h4>
@@ -162,9 +164,12 @@
             <center>
                 <p>Portfolio de Clément MARGUERITTE<br>
                     Mes réseaux:
-                    <a href="https://www.linkedin.com/in/cl%C3%A9ment-margueritte-21a174196/" target="_blank"><img src="assets/img/linkedin.png" alt="linkedin"></a>
-                    <a href="https://www.instagram.com/xlemeny_/" target="_blank"><img src="assets/img/insta.png" alt="instagram"></a>
-                    <a href="https://www.twitch.tv/misterpmlo" target="_blank"><img src="assets/img/twitch.png" alt="twitch"></a> <br>
+                    <a href="https://www.linkedin.com/in/cl%C3%A9ment-margueritte-21a174196/" target="_blank"><img
+                            src="assets/img/linkedin.png" alt="linkedin"></a>
+                    <a href="https://www.instagram.com/xlemeny_/" target="_blank"><img src="assets/img/insta.png"
+                            alt="instagram"></a>
+                    <a href="https://www.twitch.tv/misterpmlo" target="_blank"><img src="assets/img/twitch.png"
+                            alt="twitch"></a> <br>
             </center>
             <center class="made">MADE IN 2020</center>
             </p>
@@ -173,9 +178,10 @@
 
     <script>
         // Scirpt pour afficher le loading screen
-        var myVar;
+        var loadtime;
+
         function loadFunction() {
-            myVar = setTimeout(showPage, 3000);
+            loadtime = setTimeout(showPage, 3000);
         }
 
         function showPage() {
@@ -203,7 +209,16 @@
 
         // Scripts pour faire défiler les projets
         var slide = 1;
-        showDivs(slide);
+
+        timeDiv();
+
+        function timeDiv() {
+            setTimeout(function () {
+                slide += 1;
+                showDivs(slide);
+                timeDiv();
+            }, 5000);
+        }
 
         function plusDivs(n) {
             showDivs(slide += n);
@@ -231,6 +246,28 @@
             }
             x[slide - 1].style.display = "block";
             dots[slide - 1].className += " w3-white";
+        }
+
+        //Get the button:
+        bouton = document.getElementById("topButton");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                bouton.style.display = "block";
+            } else {
+                bouton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
 </body>
