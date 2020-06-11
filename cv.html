@@ -69,6 +69,9 @@
         var i = 0;
         var txt = 'CV UnderConstruction';
         var speed = 100;
+        var x = document.createElement('span');
+        x.setAttribute("class", "blink_me");
+        x.innerHTML = "_";
 
         function typeWriter() {
             if (i < txt.length) {
@@ -76,11 +79,12 @@
                 i++;
                 setTimeout(typeWriter, speed);
             } else {
+                document.getElementById("demo").appendChild(x);
                 setTimeout(function () {
                     document.getElementById("demo").innerHTML = '';
                     i = 0;
                     typeWriter();
-                }, 3000);
+                }, 5000);
             }
         }
     </script>

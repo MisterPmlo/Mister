@@ -395,6 +395,40 @@ html {
     font-size: 60px;
     color: white;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #7289da, 0 0 70px #7289da, 0 0 80px #7289da, 0 0 100px #7289da, 0 0 150px #7289da;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #7289da, 0 0 35px #7289da, 0 0 40px #7289da, 0 0 50px #7289da, 0 0 75px #7289da;
+    }
+  }
+
+  @-moz-keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #7289da, 0 0 70px #7289da, 0 0 80px #7289da, 0 0 100px #7289da, 0 0 150px #7289da;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #7289da, 0 0 35px #7289da, 0 0 40px #7289da, 0 0 50px #7289da, 0 0 75px #7289da;
+    }
+  }
+
+  @keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #7289da, 0 0 70px #7289da, 0 0 80px #7289da, 0 0 100px #7289da, 0 0 150px #7289da;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #7289da, 0 0 35px #7289da, 0 0 40px #7289da, 0 0 50px #7289da, 0 0 75px #7289da;
+  }
 }
 
 @media screen and (max-width:760px) {
@@ -521,4 +555,14 @@ body {
   #topButton img {
       width: 20px;
       height: 20px;
+  }
+
+  .blink_me {
+    animation: blinker 1.5s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
   }
